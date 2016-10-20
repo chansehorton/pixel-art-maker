@@ -36,10 +36,10 @@ html,body {
 
 .row {
   height: auto;
-  width: inherit;
+  width: auto;
 
   display: flex;
-  justify-content: center;;
+  justify-content: center;
 }
 
 .pixel {
@@ -55,7 +55,7 @@ html,body {
   height: 15%;
   width: 80%;
 
-  border: 1px solid black;
+  display: flex;
   left: 50%;
   position: absolute;
   top: 50%;
@@ -65,49 +65,29 @@ html,body {
 .color_table {
   height: 95%;
   width: 80%;
+
   display: flex;
-  border: 1px solid black;
+  flex: 3;
+  flex-flow: column nowrap;
 }
 
 .color_choice {
+  min-height: 2em;
+  max-width: 2em;
   border-radius: 50%;
   border: 1px solid black;
   flex: 1;
 }
 
-.red {
-  background-color: red;
+.color_row {
+  width: inherit;
+
+  display: flex;
+  justify-content: center;
 }
-.blue {
-  background-color: blue;
-}
-.yellow {
-  background-color: yellow;
-}
-.orange {
-  background-color: orange;
-}
-.green {
-  background-color: green;
-}
-.purple {
-  background-color: purple;
-}
-.black {
-  background-color: black;
-}
-.white {
-  background-color: white;
-}
-.gray {
-  background-color: gray;
-}
-.teal {
-  background-color: teal;
-}
-.coral {
-  background-color: coral;
-}
-.khaki {
-  background-color: khaki;
+
+.selected_color {
+  border: 1px solid black;
+  flex: 1
+
 }
