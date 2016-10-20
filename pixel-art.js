@@ -15,10 +15,12 @@ window.onload = function() {
   populateColorTable(colorArray);
 
   function changeColor(e) {
-    console.log(e.target.className);
     if (e.target !== e.currentTarget) {
       var clickedItem = e.target;
-      clickedItem.style.backgroundColor = currentColor;
+
+      if (e.target.className !== "row") {
+        clickedItem.style.backgroundColor = currentColor;
+      };
     };
     e.stopPropagation();
   }
@@ -26,6 +28,7 @@ window.onload = function() {
   function setColor(e) {
     if (e.target !== e.currentTarget) {
       var clickedItem = e.target;
+
       currentColor = window.getComputedStyle(clickedItem).getPropertyValue('background-color');
       document.querySelector(".selected_color").style.backgroundColor = currentColor;
     };
